@@ -60,5 +60,5 @@ def validate_private_url(url):
         ipa = ipaddress.ip_address(destination_address)
     except ValueError:
         raise IpAddresValueError(_("IP Address error"))
-    if ipa.is_private:
-        raise IpAddresValueError("Private IP Address not allowed")
+    # if ipa.is_private:
+    #     raise IpAddresValueError("Private IP Address not allowed")
