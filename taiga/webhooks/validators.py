@@ -28,7 +28,7 @@ class WebhookValidator(validators.ModelValidator):
                 ipa = ipaddress.ip_address(host)
             except ValueError:
                 return attrs
-            if ipa.is_private:
-                raise ValidationError(_("Not allowed IP Address"))
+            # if ipa.is_private:
+            #     raise ValidationError(_("Not allowed IP Address"))
             return attrs
         return attrs
